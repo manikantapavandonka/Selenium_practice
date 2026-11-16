@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automation Practice Page</title>
+</head>
+<body>
+
+    <h1>Login Page</h1>
+
+    <form>
+        <label>Username:</label>
+        <input type="text" id="username"
+               name="user" class="input-field">
+
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password"
+               name="pass" class="input-field">
+
+        <br><br>
+
+        <label>
+       <input type="checkbox" id="rememberMe">
+        Remember Me
+       </label>
+       
+       <br><br>
+        
+        <button id="loginBtn" type="button" onclick="alert('Login button clicked successfully!')">
+            Login
+        </button>
+
+        <br><br>
+
+        <a href="https://www.google.com">Create Account</a>
+        
+        <br><br>
+        
+        <h2>Select Your Course</h2>
+
+<div id="courseDropdown">
+    <button id="dropdownBtn" onclick="showOptions()">
+        Select Course
+    </button>
+
+    <ul id="courseOptions" style="display:block;">
+        <li onclick="selectCourse(this)">Java</li>
+        <li onclick="selectCourse(this)">Python</li>
+        <li onclick="selectCourse(this)">Selenium</li>
+        <li onclick="selectCourse(this)">SQL</li>
+    </ul>
+</div>
+
+<p id="selectedCourse"></p>
+
+<script>
+function showOptions() {
+    document.getElementById("courseOptions").style.display = "block";
+}
+
+function selectCourse(option) {
+    document.getElementById("selectedCourse").innerText =
+        "Selected Course: " + option.innerText;
+
+    document.getElementById("courseOptions").style.display = "none";
+}
+</script>
+        
+        <br><br>
+        
+        <select id="course">
+    <option value="java">Java</option>
+    <option value="python">Python</option>
+    <option value="selenium">Selenium</option>
+</select>
+
+<h3>Select Your Skills</h3>
+
+<select id="skills" multiple>
+    <option value="java">Java</option>
+    <option value="python">Python</option>
+    <option value="selenium">Selenium</option>
+    <option value="sql">SQL</option>
+</select>
+        
+    <br><br>    
+        
+<button id="simpleAlertBtn" onclick="showAlert()">
+    Show Alert
+</button>
+
+<script>
+function showAlert() {
+    alert("Login Successful");
+}
+</script>
+
+<br><br>    
+
+<button id="confirmBtn" onclick="showConfirm()">
+    Delete Account
+</button>
+
+<p id="confirmResult"></p>
+
+<script>
+function showConfirm() {
+    let result = confirm("Are you sure you want to delete your account?");
+
+    if (result) {
+        document.getElementById("confirmResult").innerText =
+            "Account deletion confirmed";
+    } else {
+        document.getElementById("confirmResult").innerText =
+            "Account deletion cancelled";
+    }
+}
+
+</script>
+
+<br><br>  
+
+<button id="promptBtn" onclick="showPrompt()">
+    Enter Your Name
+</button>
+
+<p id="promptResult"></p>
+
+<script>
+function showPrompt() {
+    let name = prompt("Please enter your name:");
+
+    if (name != null) {
+        document.getElementById("promptResult").innerText =
+            "Welcome " + name;
+    } else {
+        document.getElementById("promptResult").innerText =
+            "User cancelled";
+    }
+}
+</script>
+
+    </form>
+
+</body>
+</html>
