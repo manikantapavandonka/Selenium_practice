@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScriptExecutor</title>
+</head>
+<body>
+    <h2 id="main_heading">JavaScriptExecutor Practice</h2>
+
+<p id="jsMessage">Welcome to Selenium</p>
+
+<button id="jsButton" onclick="changeMessage()">
+    Change Message
+</button>
+
+<script>
+function changeMessage() {
+    document.getElementById("jsMessage").innerText =
+        "JavaScriptExecutor Working Successfully";
+}
+</script>
+
+<br><br>
+
+<h2>JavaScript Click Practice</h2>
+
+<button id="jsClickBtn" onclick="showMessage()">
+    Click Me
+</button>
+
+<p id="jsClickResult"></p>
+
+<script>
+function showMessage() {
+    document.getElementById("jsClickResult").innerText =
+        "Button Clicked Using JavaScript";
+}
+</script>
+
+<br><br>
+
+<h2>JavaScript Text Entry Practice</h2>
+
+<input type="text" id="jsName"
+       placeholder="Enter your name">
+
+<button id="showNameBtn" onclick="displayName()">
+    Submit
+</button>
+
+<p id="nameResult"></p>
+
+<script>
+function displayName() {
+    let name = document.getElementById("jsName").value;
+
+    document.getElementById("nameResult").innerText =
+        "Welcome " + name;
+}
+</script>
+
+
+<br><br>
+
+<h2 id="bottomHeading">You Reached the Bottom</h2>
+
+<br><br>
+
+<h2>Hidden Element Practice</h2>
+
+<input type="text" id="hiddenInput"
+       value="Selenium"
+       style="display:none;">
+
+<button id="showHiddenBtn"
+        onclick="showInput()">
+    Show Hidden Element
+</button>
+
+<script>
+function showInput() {
+    document.getElementById("hiddenInput").style.display = "block";
+}
+</script>
+
+<br><br>
+
+<h2>Remove Attribute Practice</h2>
+
+<input type="text" id="disabledInput"
+       value="Selenium"
+       disabled>
+
+<p id="attributeResult"></p>
+
+<br><br>
+
+<h2>Set Attribute Practice</h2>
+
+<input type="text" id="userInput"
+       placeholder="Enter your name">
+
+<p id="attributeResult"></p>
+</body>
+</html>
